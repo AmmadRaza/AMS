@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm())
+{
+    <table>
+        @foreach (var item in ViewBag.record)
+        {
+            <tr>
+                <td><input type="checkbox" name="StudentId" value="@item.S_Id" /></td>
+                <td>@item.S_Name</td>
+            </tr>
+        }
+        <tr>
+            <td>
+
+                <button type="submit" value="List">DONE</button>
+
+            </td>
+        </tr>
+    </table>
+}
